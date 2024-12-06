@@ -22,7 +22,7 @@ func computeGrade(points float32, maxpoints float32) {
 
 func main() {
 	// TODO: call the function computeGrade
-	computeGrade(17.5, 28.0)
-	computeGrade(20, 10)
-	computeGrade(-3, 20)
+	computeGrade(17.5, 28.0)  // 4.125
+	computeGrade(20, 10) // Points cannot be bigger than max points
+	computeGrade(-3, 20) // Points have to be positive
 }
