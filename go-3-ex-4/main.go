@@ -35,4 +35,15 @@ func main() {
 	}
 	// TODO: delete this line afterwards
 
-}
+	var cards map[rune][]string = map[rune][]string{}
+
+	for _, suit := range suits {
+		for _, rank := range ranks {
+			cards[suit] = append(cards[suit], fmt.Sprintf("%c", rank))
+		}
+	}
+
+	fmt.Println("\nCards by suit:")
+	for suit, cardList := range cards {
+		fmt.Printf("%c: %v\n", suit, cardList)
+	}}
