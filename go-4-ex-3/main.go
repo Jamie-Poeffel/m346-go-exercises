@@ -4,10 +4,12 @@ import (
 	"fmt"
 	"math"
 )
-
+func computeDiscriminant(a float64, b float64, c float64) float64 {
+	return (math.Pow(b, 2) - 4 * a * c)
+}
 // TODO: implement the function computeQuadraticFormula
 func computeQuadraticFormula(a float64, b float64, c float64){
-	D := (math.Pow(b, 2) - 4 * a * c)
+	D := computeDiscriminant(a, b, c)
 
 	switch {
 		case D > 0:
